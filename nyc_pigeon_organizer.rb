@@ -7,16 +7,20 @@ def nyc_pigeon_organizer(data)
     attribute_details.each do |detail, names|
       names.each do |name|
         if pigeons.keys.include?(name)
-          if pigeons[name][attribute]
-            pigeons[name][attribute] << detail
-          else
-            pigeons[name][attribute] = [detail]
+          # if pigeons[name][attribute]
+          #   pigeons[name][attribute] << detail
+          # else
+          #   pigeons[name][attribute] = [detail]
+          # end
         else
-          pigeons[name][attribute] = [detail]
+          # pigeons => {name: "foo"}
+          pigeons[name] = {attribute => detail}
+          binding.pry
         end
       end
     end
   end
   
+  binding.pry
   pigeons
 end
