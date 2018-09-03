@@ -14,7 +14,6 @@ def nyc_pigeon_organizer(data)
           # end
         else
           pigeons[name] = {attribute => detail}
-          binding.pry
         end
       end
     end
